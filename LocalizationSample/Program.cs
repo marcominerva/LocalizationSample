@@ -25,7 +25,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
         {
             Status = statusCode,
             Title = Messages.ValidationErrorsOccurred,
-            Type = $"https://httpstatuses.com/{statusCode}",
+            Type = $"https://httpstatuses.io/{statusCode}",
             Instance = httpContext.Request.Path
         };
         problemDetails.Extensions.Add("traceId", Activity.Current?.Id ?? httpContext.TraceIdentifier);
